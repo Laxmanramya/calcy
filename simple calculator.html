@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <style>
+        body {
+            background-color: aqua;
+        }
+
+        .container {
+            border: 2px solid black;
+            width: 300px;
+            padding: 6px;
+
+
+        }
+
+        h2 {
+            color: blue;
+            text-decoration: underline;
+        }
+
+        button:hover {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <h2>Simple Calculator:</h2>
+            <div>
+                <label>Enter a value:</label>
+                <input type="text" id="numA">
+            </div>
+            <br>
+            <div>
+                <label>Enter b value:</label>
+                <input type="text" id="numB">
+            </div>
+
+            <br>
+            <button onclick="addition();">+</button>
+            <button onclick="sub();">-</button>
+            <button onclick="mul();">*</button>
+            <button onclick="modulus();">%</button>
+            <p id="result">OUTPUT??</p>
+        </form>
+    </div>
+    <script>
+        function addition() {
+            var a = parseInt(document.getElementById("numA").value);
+            var b = parseInt(document.getElementById("numB").value);
+
+            var c = a + b;
+            document.getElementById("result").innerHTML = c;
+
+        }
+        function sub() {
+            var a = parseInt(document.getElementById("numA").value);
+            var b = parseInt(document.getElementById("numB").value);
+
+            var c = a - b;
+            document.getElementById("result").innerHTML = c;
+        }
+        function mul() {
+            var a = parseInt(document.getElementById("numA").value);
+            var b = parseInt(document.getElementById("numB").value);
+
+            var c = a * b;
+            document.getElementById("result").innerHTML = c;
+        }
+        function modulus() {
+            var a = parseInt(document.getElementById("numA").value);
+            var b = parseInt(document.getElementById("numB").value);
+
+            var c = a % b;
+            document.getElementById("result").innerHTML = c;
+        }
+    </script>
+</body>
+
+</html>
